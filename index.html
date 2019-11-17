@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Uh Oh Stinky Master 2</title>
+  <script src="https://js-dos.com/6.22/current/js-dos.js"></script>
+  <style>
+    canvas {
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="jsdos"></canvas>
+  <script>
+    Dos(document.getElementById("jsdos"), { 
+        wdosboxUrl: "https://js-dos.com/6.22/current/wdosbox.js" 
+    }).ready((fs, main) => {
+      fs.extract("https://raw.githack.com/JF10R3/uhohstinkymaster2/master/Archive.zip").then(() => {
+        main(["-c", "STINKY2.EXE"])
+      });
+    });
+  </script>
+</body>
+
+</html>
